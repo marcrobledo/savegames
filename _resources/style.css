@@ -1,0 +1,199 @@
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	line-height:1.7;
+	margin:0;
+	background-color:#282828;
+	color: #eeeeee;
+}
+body.light{
+	background-color:#eeeeee;
+	color: #282828;
+}
+.text-right{text-align:right}
+#ribbon{
+	background-color:#2d2d2d;
+	text-align:center;
+	margin-bottom:40px;
+}
+#marc{color:#ffc300}
+h1{font-size:240%;font-weight:normal; margin:0;padding:30px 10px}
+body.light #ribbon{background-color:white}
+body.light #marc{color:#2cb2ff}
+h3:before{
+	content:"";
+	display:block;
+	clear:both;
+}
+#toolbar{font-size:90%;height:60px;color:#888}
+#wrapper{width:720px;margin: 0 auto;max-width:95%;}
+
+
+#tooltip{
+	position:absolute;
+	background-color:black;
+	color:white;
+	z-index:500;
+	box-sizing:border-box;
+	border-radius:3px;
+	padding: 10px;
+	max-width:300px;
+	display:none;
+}
+#tooltip:before{
+	width:0px;
+	height:0px;
+	border: solid transparent;
+	border-width: 10px;
+	border-bottom:10px solid black;
+	position:absolute;
+	top:-20px;
+	left:50%;
+	margin-left: -10px;
+	content:" ";
+	display:inline-block;
+}
+
+
+
+
+
+
+
+
+/* https://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height */
+.cover-container{
+	text-align:center; /* Align center inline elements */
+	font: 0/0 a;       /* Hide the characters like spaces */
+	height:160px;
+	//background-color:rgba(255,0,0,.1)
+}
+
+.cover-container:before {
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.cover-container img {
+	vertical-align: middle;
+	display: inline-block;
+	max-height: 100%;  /* <-- Set maximum height to 100% of its parent */
+	max-width: 100%;   /* <-- Set maximum width to 100% of its parent */
+}
+
+.game-list{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.game-list:after{
+	display:block;
+	clear:both;
+	margin-bottom:30px;
+	content:"";
+}
+.game-list a{
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	border-radius:3px;
+	color:inherit;
+	transition:background-color .2s;
+	padding: 8px 10px;
+}
+.game-list a:hover{background-color:#323232}
+body.light .game-list a:hover{background-color:#ccc}
+
+
+.game-list li{
+	width:25%;
+	box-sizing:padding-box;
+	padding:0;
+	margin:0;
+	float:left;
+	height:220px;
+}
+.game-list li.clickable:hover{
+	cursor:pointer;
+	background-color:#3c3c3c;
+}
+
+.game-list li.clickable:hover .name{
+	color:#ffd02b !important;
+}
+
+.system{
+	color:#7b7b7b;
+	display:inline-block;
+	width:150px;
+	font-size:90%;
+}
+.completion,.info{display:none}
+
+
+
+.sprite{
+	display:inline-block;
+	vertical-align:middle;
+	background-image:url(sprites_dark.png);
+}
+body.light .sprite{background-image:url(sprites_light.png)}
+
+.check{
+	width:12px;
+	height:9px;
+	background-size:12px 18px;
+	margin-left:5px;
+}
+.check.gold{background-position:0px -9px}
+
+
+.system-logo{
+	display:inline-block;
+	vertical-align:middle;
+	width:164px;
+	height:24px;
+	/*background-size:123px 414px;*/
+	background-image:url(cats.png);
+}
+
+#switch-theme{margin-right:10px}
+.switch{
+	width:40px;
+	height:20px;
+	display:inline-block;
+	border-radius:15px;
+	position:relative;
+	transition:background-color .2s;
+	background-color:#444;
+	vertical-align:middle;
+}
+.switch.on{
+	background-color:#ffc300;
+}
+.switch:before{
+	content:"";
+	display:inline-block;
+	height:14px;
+	width:14px;
+	background-color:white;
+	border-radius:12px;
+	position:absolute;
+	top:3px;
+	left:4px;
+	transition:left .2s;
+}
+.switch.on:before{
+	left:24px
+}
+.switch:hover{cursor:pointer;}
+
+
+
+/* list */
+body.list .game-list li{width:100%;height:auto}
+body.list .game-list a{text-align:left}
+body.list .cover-container{margin-right:10px;display:inline-block;vertical-align:middle;width:80px;height:50px}
