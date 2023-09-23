@@ -1,113 +1,114 @@
-var covers=[];
-function checkSwitch(el){
-	return /on/.test(el.className)
-}
-function switchButton(el){
-	if(checkSwitch(el))
-		el.className='switch off';
-	else
-		el.className='switch on';
+var lazyCovers=[];
 
-	var newClassName='';
-	if(!checkSwitch(document.getElementById('switch-theme')))
-		newClassName='light';
-	if(!checkSwitch(document.getElementById('switch-grid')))
-		newClassName+=' list';
-	document.body.className=newClassName;
-}
+var balloon=document.createElement('div');
+balloon.id='balloon';
 
-function showTooltip(){
-	document.getElementById('tooltip').innerHTML=this.tooltipText;
+function itemShow(evt){
+	var liDim=this.getBoundingClientRect();
+	var x=parseInt(liDim.x+window.scrollX);
+	var y=parseInt(liDim.y+window.scrollY);
 
-	var rect=this.getBoundingClientRect();
-	document.getElementById('tooltip').style.display='block';
-	document.getElementById('tooltip').style.top=parseInt(rect.top+rect.height+window.scrollY+10)+'px';
-
-	var leftPos=parseInt(rect.left);
-	if(leftPos<0)
-		leftPos=0;
-	document.getElementById('tooltip').style.left=leftPos+'px';
+	balloon.innerHTML=this.itemInfo.status;
+	if(this.itemInfo.more)
+		balloon.innerHTML+='<hr/>'+this.itemInfo.more;
+	balloon.style.display='block';
 	
+	var offsetX=parseInt((liDim.width-balloon.getBoundingClientRect().width)/2);
+
+
+	balloon.style.top=parseInt(y+liDim.height-4)+'px';
+	balloon.style.left=(x+offsetX)+'px';
 	
 }
-function hideTooltip(){
-	document.getElementById('tooltip').style.display='none';
+function itemHide(evt){
+	balloon.style.display='none';
+}
+function _clickCell(evt){
+	if(/\.png/.test(this.children[1].href)){
+		overlay.firstChild.src=this.children[1].href;
+		overlay.style.display='block';
+	}else{
+		this.children[1].click();
+	}
+}
+function parseList(id){
+	var items=document.getElementById(id).children;
+	for(var i=0; i<items.length; i++){
+		var li=items[i];
+
+		li.itemInfo={
+			status:null,
+			more:false
+		};
+
+
+		if(li.children[0].tagName==='A' && /Download savegame for .*? \(.*?\)/.test(li.children[0].innerHTML)){			
+			var matches=li.children[0].innerHTML.match(/^Download savegame for (.*?) \((.*?)\)$/);
+			var title=matches[1];
+			li.itemInfo.status=matches[2];
+			
+			
+			if(li.children[1] && li.children[1].tagName==='DIV' && /more/.test(li.children[1].className))
+				li.itemInfo.more=li.children[1].innerHTML;
+
+
+
+
+			var a=li.children[0];
+			a.innerHTML=title;
+			if(/verified/.test(a.className)){
+				var	check=document.createElement('i');
+				check.className='check';
+				a.appendChild(check);
+			}
+
+
+
+
+
+			var coverContainer=document.createElement('div');
+			coverContainer.className='cover-container';
+			var cover=new Image();
+			cover.loading='lazy';
+			cover.src=li.children[0].href.replace(/\.\w+$/,'.jpg');
+			lazyCovers.push(cover);
+			coverContainer.appendChild(cover);
+			li.insertBefore(coverContainer, a);
+
+
+
+
+
+
+
+
+
+
+			li.addEventListener('click', _clickCell, false);
+
+			li.addEventListener('mouseenter', itemShow, false);
+			li.addEventListener('mouseleave', itemHide, false);
+			
+
+			
+		}else{
+			console.error('invalid item: '+li.children[0].innerText);
+		}
+	}
 }
 
-var SYSTEMS=['Game Boy', 'Game Boy Color', 'Game Boy Advance','Neo Geo Pocket','Nintendo DS','Nintendo 3DS','NES','Super Nintendo','Nintendo 64','Nintendo Gamecube','Nintendo Wii','Nintendo Wii U','Sega Master System','Sega Megadrive','Sega Saturn','Sega Dreamcast','Sony PlayStation']
-window.addEventListener('load', function(){
-	var lis=document.querySelectorAll('ol.game-list li');
-	for(var i=0; i<lis.length; i++){
-		var divInfo=lis[i].querySelector('div.info');
-		if(divInfo){
-			lis[i].tooltipText=divInfo.innerHTML;
-			lis[i].addEventListener('mouseover', showTooltip, false);
-			lis[i].addEventListener('mouseout', hideTooltip, false);
-		}
-
-		var a=lis[i].children[0];
-		var originalTitle=a.innerHTML;
-
-		var matches=a.href.match(/(\w+\/\w+)\.\w+$/);
-		var coverContainer=document.createElement('div');
-		coverContainer.className='cover-container';
-		var img=new Image();
-		img.dataset.src='./_resources/'+matches[1]+'.jpg';
-		img.src='./_resources/loading.gif';
-		covers.push(img);
-		coverContainer.appendChild(img);
-		a.insertBefore(coverContainer, a.firstChild);
-
-		var percent=lis[i].children[1].innerHTML.match(/^(\d+(\.\d+)?)%$/);
-		if(percent){
-			var	check=document.createElement('i');
-			check.className='sprite check';
-			check.title=percent[1]+'%';
-			percent=parseInt(percent[1]);
-			if(percent>=100)
-				check.className+=' gold';
-			a.appendChild(check);
-		}
-
-	}
-
-	var systems=document.querySelectorAll('h3');
-	for(var i=0;i<systems.length;i++){
-		var system=systems[i];
-		var index=SYSTEMS.indexOf(system.innerHTML);
-		if(index>=0){
-			system.title=system.innerHTML;
-			system.innerHTML='<span class="system-logo" style="background-position:0px -'+(24*index)+'px"></span>';
-		}
-	}
 
 
 
-	processScroll();
-	window.addEventListener('scroll', processScroll, false);
+
+var overlay=document.createElement('div');
+overlay.id='overlay';
+overlay.appendChild(document.createElement('img'));
+overlay.addEventListener('click', function(evt){
+	this.style.display='none';
 }, false);
 
-
-
-/* lazy loading */function elementInViewport(e){
-	var r=e.getBoundingClientRect()
-	return (r.top>=0 && r.left>=0 && r.top<=(window.innerHeight || document.documentElement.clientHeight))
-}
-function loadImage(e,fn){
-	var img=new Image();
-	var src=e.getAttribute('data-src');
-	img.onload=function(){
-		if(!!e.parent)
-			e.parent.replaceChild(img, e)
-		else
-			e.src = src;
-
-		fn? fn():null;
-	}
-	img.src=src;
-}
-function processScroll(){
-	for(var i=0;i<covers.length;i++)
-		if(elementInViewport(covers[i]))
-			loadImage(covers[i], function(){covers.splice(i,i)});
-}
+window.addEventListener('load', function(){
+	document.body.appendChild(balloon);
+	document.body.appendChild(overlay);
+}, false);
