@@ -156,6 +156,9 @@ ol>li>a{
 	width:100%;
 	height:100%;
 	display:none;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(4px);
 }
 #overlay img{
     -moz-transform: scale(2);

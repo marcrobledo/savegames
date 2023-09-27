@@ -1,5 +1,3 @@
-var lazyCovers=[];
-
 var balloon=document.createElement('div');
 balloon.id='balloon';
 
@@ -26,7 +24,7 @@ function itemHide(evt){
 function _clickCell(evt){
 	if(/\.png/.test(this.children[1].href)){
 		overlay.firstChild.src=this.children[1].href;
-		overlay.style.display='block';
+		overlay.style.display='flex';
 	}else{
 		this.children[1].click();
 	}
@@ -70,10 +68,9 @@ function parseList(id){
 			coverContainer.className='cover-container';
 			var cover=new Image();
 			cover.loading='lazy';
-			cover.src=li.children[0].href.replace(/\.\w+$/,'.jpg');
-			lazyCovers.push(cover);
 			coverContainer.appendChild(cover);
 			li.insertBefore(coverContainer, a);
+			cover.src=li.children[0].href.replace(/\.\w+$/,'.jpg');
 
 
 
