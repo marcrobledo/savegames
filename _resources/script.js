@@ -69,8 +69,8 @@ function parseList(id){
 			var cover=new Image();
 			cover.loading='lazy';
 			coverContainer.appendChild(cover);
-			li.insertBefore(coverContainer, a);
 			cover.src=li.children[0].href.replace(/\.\w+$/,'.jpg');
+			li.insertBefore(coverContainer, a);
 
 
 
