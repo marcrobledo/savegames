@@ -9,42 +9,1070 @@
 	<meta name="keywords" content="nes, snes, game, boy, color, advance, gb, gbc, gba, gc, gamecube, nintendo, sega, n64, dreamcast, wii, switch, nds, ds, 3ds, save, saves, game, savegame, savegames, sram, battery, memory, card"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
-	<link rel="shortcut icon" href="_resources/favicon.png"/>
+	<link rel="shortcut icon" href="./_resources/favicon.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,900" rel="stylesheet">
 
-	<link type="text/css" rel="stylesheet" href="_resources/style.css" media="all"/>
+	<link type="text/css" rel="stylesheet" href="./_resources/style.css" media="all"/>
+	
+	<script>
+		window.addEventListener('load', function(evt){
+			const lis=Array.from(document.body.querySelectorAll('ol>li'));
+			const svg=document.getElementById('svg-check');
+			lis.forEach(function(li){
+				const a=li.querySelector('a');
+				const span=document.createElement('span');
+				span.innerHTML=a.innerHTML;
+				a.innerHTML='';
+				a.appendChild(span);
+				if(a.classList.contains('verified')){
+					const svg2=svg.cloneNode(true);
+					svg2.style.display='inline-block';
+					a.appendChild(svg2);
+				}
+				li.addEventListener('click', function(evt){
+					evt.stopPropagation();
+					a.click();
+				});
+			});
+		});
+	</script>
 </head>
 <body>
 
 <h1><span id="marc">Marc</span> Savegames</h1>
 
-<nav>
-	<a href="gb/"><abbr title="Game Boy">GB / GBC</abbr></a>
-	<a href="gba/"><abbr title="Game Boy Advance">GBA</abbr></a>
-	<a href="nds/"><abbr title="Nintendo DS">NDS</abbr></a>
-	<a href="3ds/"><abbr title="Nintendo 3DS">3DS</abbr></a>
 
-	<a href="snes/"><abbr title="Super NES">SNES</abbr></a>
-	<a href="n64/"><abbr title="Nintendo 64">N64</abbr></a>
-	<a href="gc/"><abbr title="Nintendo GameCube">GC</abbr></a>
-	<a href="wii/"><abbr title="Nintendo Wii">Wii</abbr></a>
-	<a href="wiiu/"><abbr title="Nintendo Wii U">Wii U</abbr></a>
-	<a href="switch/"><abbr title="Nintendo Switch">NS</abbr></a>
-
-	<a href="sega/">Sega</a>
-	<a href="sony/">Sony</a>	
-	<a href="other/">Other</a>
-</nav>
-
-<div id="intro">
-	Here you will find a compilation of some of my savegames of different plataforms. I consider a completionist myself and I like to keep backups of my savegames, it&#39;s like a trophy for all <s>wasted</s> played hours. And I figured it wouldn&#39;t harm to share them, hoping they can be useful for someone! :-)<br/><br/>
-	All savegames here:
+<!-- <svg class="icon"><use href="#check" xlink:href="#check" /></svg> -->
+<div class="wrapper">
+	<p>
+		Here you will find a compilation of some of my savegames of different plataforms. I consider a completionist myself and I like to keep backups of my savegames, it&#39;s like a trophy for all <s>wasted</s> played hours. And I figured it wouldn&#39;t harm to share them, hoping they can be useful for someone! :-)
+	</p>
+	<p>
+		All savegames here:
+	</p>
 	<ul>
 		<li>are completed and legit <small>(no cheats were used unless it&#39;s specified)</small></li>
 		<li>come from PAL versions if possible <small>(though they are usually region-free)</small></li>
 		<li>can be transferred to original cartridges, memory cards and/or used in emulators</li>
 	</ul>
 </div>
+
+<svg id="svg-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="display:none"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.02-1.04.75.75 0 0 0-1.04-.02L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.04.02.75.75 0 0 0-.02 1.04l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+
+<!-- GAME BOY -->
+<div class="h2-container"><h2 class="wrapper">Game Boy savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="gb/cave_noire.zip" class="verified">Cave Noire</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/donkey_kong_94.zip" class="verified">Donkey Kong &#39;94</a><div class="desc">Game completed</div></li>
+	<li><a href="gb/donkey_kong_land.zip" class="verified">Donkey Kong Land</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/donkey_kong_land_2.zip" class="verified">Donkey Kong Land 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/donkey_kong_land_3.zip" class="verified">Donkey Kong Land III</a><div class="desc">Game 103% completed</div></li>
+	<li><a href="gb/game_and_watch_gallery.zip" class="verified">Game &amp; Watch Gallery</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/kaeru_no_tame_ni_kane_wa_naru.zip" class="verified">Kaeru no Tame ni Kane wa Naru</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/kid_icarus_of_myths_and_monsters.zip" class="verified">Kid Icarus: Of myths and monsters</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/kirbys_block_ball.zip" class="verified">Kirby&#39;s Block Ball</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/kirbys_dream_land_2.zip" class="verified">Kirby&#39;s Dream Land 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/kirbys_star_stacker.zip" class="verified">Kirby&#39;s Star Stacker</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/zelda_links_awakening.zip" class="verified">The legend of Zelda: Link's Awakening</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/marios_picross.zip" class="verified">Mario&#39;s Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/megaman_5.png" class="verified">Mega Man V</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/metroid_2.zip" class="verified">Metroid 2: Return of Samus</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/mole_mania.zip" class="verified">Mole Mania</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/monster_max.png" class="verified">Monster Max</a><div class="desc">Game completed</div></li>
+	<li><a href="gb/picross_2.zip" class="verified">Picross 2</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gb/pokemon_red.zip" class="verified">Pokémon Red Version</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Glitchless living pokédex completed<br/>
+			All items (but some TMs) obtained
+		</div>
+	</li>
+	<li>
+		<a href="gb/pokemon_yellow.zip" class="verified">Pokémon Yellow Version: Special Pikachu Edition</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Living pokédex completed<br/>
+			All items (but some TMs) obtained<br/>
+			Glitches used<ul>
+				<li>Mew/Ditto glitch used to get unobtainables and Moon Stone evolutions</li>
+				<li>no-starter glitch used to get Magmar</li>
+				<li>EXP underflow glitch used to get level 100 Pokémon before 1st gym</li>
+				<li>most trainers were skipped so you can use the Mew/Ditto glitch as much as you want</li>
+			</ul>
+		</div>
+	</li>
+	<li><a href="gb/super_mario_land_2.zip" class="verified">Super Mario Land 2: Six Golden Coins</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/tetris_plus.zip" class="verified">Tetris Plus</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gb/turok.png" class="verified">Turok: Battle of the Bionosaurs</a><div class="desc">Game completed</div></li>
+	<li><a href="gb/wario_land.zip" class="verified">Wario Land: Super Mario Land 3</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- GAME BOY COLOR -->
+<div class="h2-container"><h2 class="wrapper">Game Boy Color</h2></div>
+<ol class="wrapper">
+	<li><a href="gbc/balloon_fight_gb.zip" class="verified">Balloon Fight GB</a><div class="desc">Game completed</div></li>
+	<li><a href="gbc/conkers_pocket_tales.zip">Conker&#39;s Pocket Tales</a><div class="desc">Game completed</div></li>
+	<li><a href="gbc/donald_duck_quack_attack.png" class="verified">Disney&#39;s Donald Duck: Quack Attack</a><div class="desc">Game 100% complete</div></li>
+	<li><a href="gbc/donkey_kong_country.zip" class="verified">Donkey Kong Country</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="gbc/donkey_kong_gb_dinky_kong_and_dixie_kong.zip" class="verified">Donkey Kong GB: Dinky Kong &amp; Dixie Kong</a><div class="desc">Game 103% completed</div></li>
+	<li><a href="gbc/game_and_watch_gallery_2.zip" class="verified">Game &amp; Watch Gallery 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/game_and_watch_gallery_3.zip" class="verified">Game &amp; Watch Gallery 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/kirby_tilt_n_tumble.zip" class="verified">Kirby Tilt &#39;n&#39; Tumble</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/looney_tunes_collector_martian_alert.zip" class="verified">Looney Tunes Collector: Martian Alert!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/looney_tunes_collector_martian_revenge.zip" class="verified">Looney Tunes Collector: Martian Revenge!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/mario_golf.zip" class="verified">Mario Golf</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/mario_tennis.zip" class="verified">Mario Tennis</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/megaman_xtreme.zip" class="verified">Mega Man Xtreme</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gbc/megaman_xtreme_2.zip" class="verified">Mega Man Xtreme 2</a><div class="desc">Extra and Extreme modes 100% completed</div>
+		<div class="more">Game Genie was used in Extreme in order to get all weapons for both characters</div>
+	</li>
+	<li><a href="gbc/metal_gear_solid.zip" class="verified">Metal Gear Solid</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/mobile_golf.zip" class="verified">Mobile Golf</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/motocross_maniacs_2.zip" class="verified">Motocross Maniacs 2 / Crazy Bikers<sup>USA</sup></a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gbc/pokemon_gold.zip" class="verified">Pokémon Gold Edition</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Legit shinies caught using an automated <abbr title="softreset">SR</abbr>s script<br/>
+			<a href="https://bulbapedia.bulbagarden.net/wiki/Celebi_Egg_glitch" target="_blank">Celebi egg glitch</a> used
+		</div>
+	</li>
+	<li>
+		<a href="gbc/pokemon_crystal.zip" class="verified">Pokémon Crystal Edition</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			OT was RAM-hacked to match my Gold one, both games share the same living dex.<br/>
+			New additions: shiny Suicune and shiny Celebi (legitly caught by SR and traded back to a restored savegame)<br/>
+			Available events: Extreme Speed Dratini, Odd Egg and GS Ball (legitly enabled in VC)
+		</div>
+	</li>
+	<li><a href="gbc/pokemon_pinball.zip" class="verified">Pokémon Pinball</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/pokemon_puzzle_challenge.zip" class="verified">Pokémon Puzzle Challenge</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/pokemon_picross.zip" class="verified">Pokémon Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/rayman_2_forever.zip" class="verified">Rayman 2: Forever</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gbc/rtype_dx.zip" class="verified">R-Type DX</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Invencibility unlocked in R-Type DX: pause game and press <span class="button">A</span><br/>
+			Skip level unlocked in R-Type DX: pause game and press <span class="button">B</span>
+		</div>
+	</li>
+	<li><a href="gbc/samurai_kid.zip" class="verified">Samurai Kid</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gbc/shantae.zip" class="verified">Shantae</a><div class="desc">Game 100% completed</div>
+		<div class="more">Advance dance unlocked: <span class="dpad">&darr;</span> <span class="dpad">&darr;</span> <span class="dpad">&uarr;</span> <span class="dpad">&uarr;</span></div>
+	</li>
+	<li><a href="gbc/supercross_freestyle.zip" class="verified">Supercross Freestyle</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/super_mario_bros_dx.zip" class="verified">Super Mario Bros. Deluxe</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/super_robot_pinball.zip" class="verified">Super Robot Pinball</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/sutte_hakkun_gb.zip" class="verified">Sutte Hakkun GB</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/tobu_tobu_girl_dx.zip" class="verified">Tobu Tobu Girl DX</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/toki_tori.zip" class="verified">Toki Tori</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/wario_land_2.zip" class="verified">Wario Land 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gbc/wario_land_3.zip" class="verified">Wario Land 3</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gbc/zelda_links_awakening_dx.zip" class="verified">The legend of Zelda: Link&#39;s Awakening DX</a><div class="desc">Game 100% completed</div>
+		<div class="more">THIEF pic obtained in slot 2</div>
+	</li>
+	<li>
+		<a href="gbc/zelda_oracle_of_ages.zip" class="verified">The legend of Zelda: Oracle of Ages</a><div class="desc">Linked game + Hero's Secret 100% completed</div>
+		<div class="more">
+			Sea of storms inaccesible tile in unlinked game was reached using Gameshark<br/>
+			Slot 3: the savegame from the original owner one who sold me the game (will he ever find this? :-D)
+		</div>
+	</li>
+	<li><a href="gbc/zelda_oracle_of_seasons.zip" class="verified">The legend of Zelda: Oracle of Seasons</a><div class="desc">Linked game + Hero's Secret 100% completed</div></li>
+</ol>
+
+
+
+<!-- POKÉMON MINI -->
+<div class="h2-container"><h2 class="wrapper">Pokémon mini savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="other/pokemini/pokemon_pinball_mini.zip" class="verified">Pokémon Pinball Mini</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/pokemini/pokemon_puzzle_collection.zip" class="verified">Pokémon Puzzle Collection</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/pokemini/pokemon_puzzle_collection_vol_2.zip" class="verified">Pokémon Puzzle Collection Vol. 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/pokemini/pokemon_tetris.zip" class="verified">Pokémon Tetris</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/pokemini/togepi_no_daibouken.zip" class="verified">Togepi no Daibouken</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- GAME BOY ADVANCE -->
+<div class="h2-container"><h2 class="wrapper">Game Boy Advance savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="gba/american_dragon_jake_long.zip" class="verified">American Dragon: Jake Long</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/astro_boy_omega_factor.zip" class="verified">Astro Boy: Omega Factor</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/banjo_kazooie_gruntys_revenge.zip" class="verified">Banjo-Kazooie: Grunty&#39;s Revenge</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/banjo_pilot.zip" class="verified">Banjo Pilot</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/bit_generations_orbital.zip" class="verified">bit generations: Orbital</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/blackthorne.zip" class="verified">Blackthorne</a><div class="desc">Game completed</div>
+		<div class="more">Last slot has been hacked and takes you directly to the ending</div>
+	</li>
+	<li><a href="gba/boktai.zip" class="verified">Boktai: The sun is in your hand</a><div class="desc">Missing Azure Sky Tower Lv99</div></li>
+	<li><a href="gba/boktai_2.zip" class="verified">Boktai 2: Solar Boy Django</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/shin_bokura_no_taiyou_gyakushuu_no_sabata.zip" class="verified">Shin Bokura no Taiyou - Gyakushuu no Sabata</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/bubble_bobble_old_and_new.zip" class="verified">Bubble Bobble Old &amp; New</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/castlevania_circle_of_the_moon.zip" class="verified">Castlevania: Circle of the Moon</a><div class="desc">Game 100% completed</div>
+		<div class="more">All extra modes have been unlocked by hacking so you won't need to complete the game four times</div>
+	</li>
+	<li><a href="gba/castlevania_harmony_of_dissonance.zip" class="verified">Castlevania: Harmony of Dissonance</a><div class="desc">Game 200% completed</div></li>
+	<li><a href="gba/castlevania_aria_of_sorrow.zip" class="verified">Castlevania: Aria of Sorrow</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/castlevania_double_pack.zip" class="verified">Castlevania: Double Pack</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/crash_bandicoot_xs.zip" class="verified">Crash Bandicoot XS</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="gba/crash_bandicoot_2_ntranced.zip">Crash Bandicoot 2: N-Tranced</a><div class="desc">Game 99% completed</div></li>
+	<li><a href="gba/disneys_aladdin.zip" class="verified">Disney&#39;s Aladdin</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/disneys_magical_quest.zip" class="verified">Disney&#39;s Magical Quest: Starring Mickey &amp; Minnie</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/disneys_magical_quest_2.zip" class="verified">Disney&#39;s Magical Quest 2: Starring Mickey &amp; Minnie</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/disneys_magical_quest_3.zip" class="verified">Disney&#39;s Magical Quest 3: Starring Mickey &amp; Donald</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/densetsu_no_stafy.zip" class="verified">Densetsu no Stafy</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/densetsu_no_stafy_2.zip" class="verified">Densetsu no Stafy 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/densetsu_no_stafy_3.zip" class="verified">Densetsu no Stafy 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/dk_king_of_swing.zip" class="verified">DK: King Of Swing</a><div class="desc">Game 136% completed</div></li>
+	<li><a href="gba/donkey_kong_country.zip" class="verified">Donkey Kong Country</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="gba/donkey_kong_country_2.zip" class="verified">Donkey Kong Country 2</a><div class="desc">Game 102% completed</div></li>
+	<li><a href="gba/donkey_kong_country_3.zip" class="verified">Donkey Kong Country 3</a><div class="desc">Game 103% completed</div></li>
+	<li><a href="gba/dragon_ball_advanced_adventure.zip" class="verified">Dragon Ball: Advanced Adventure</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/drill_dozer.zip" class="verified">Drill Dozer</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/elevator_action_old_and_new.zip" class="verified">Elevator Action: Old &amp; New</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/final_fight_one.zip" class="verified">Final Fight One</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/fzero_maximum_velocity.zip" class="verified">F-Zero: Maximum Velocity</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/fzero_gp_legend.zip" class="verified">F-Zero: GP Legend</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/fzero_climax.zip" class="verified">F-Zero: Climax</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/game_and_watch_gallery_advance.zip" class="verified">Game &amp; Watch Gallery Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/golden_sun.zip" class="verified">Golden Sun</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/golden_sun.zip_2" class="verified">Golden Sun</a><div class="desc">Missing Dullahan</div></li>
+	<li><a href="gba/gradius_advance.zip">Gradius Advance</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/gunstar_future_heroes.zip" class="verified">Gunstar Future Heroes</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/guru_logi_champ.zip" class="verified">Guru Logi Champ</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/kirby_nightmare_in_dreamland.zip" class="verified">Kirby Nightmare in Dreamland</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/kirby_amazing_mirror.zip" class="verified">Kirby &amp; the Amazing Mirror</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/klonoa.zip" class="verified">Klonoa: Empire of Dreams</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/klonoa_2.zip" class="verified">Klonoa 2: Dream Champ Tournament</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/konami_krazy_racers.zip" class="verified">Konami Krazy Racers</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/korokoro_puzzle_happy_panechu.zip">Koro Koro Puzzle: Happy Panechu!</a><div class="desc">Some levels completed</div></li>
+	<li><a href="gba/kurukuru_kururin.zip" class="verified">Kurukuru Kururin</a><div class="desc">Missing some perfects</div></li>
+	<li><a href="gba/kururin_paradise.zip" class="verified">Kururin Paradise</a><div class="desc">Missing some perfects</div></li>
+	<li><a href="gba/mario_and_luigi.zip">Mario &amp; Luigi: Superstar Saga</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/mario_golf_advance_tour.zip" class="verified">Mario Golf: Advance Tour</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/mario_kart_super_circuit.zip" class="verified">Mario Kart: Super Circuit</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/mario_vs_donkey_kong.zip" class="verified">Mario VS Donkey Kong</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/mega_man_and_bass.zip" class="verified">Megaman &amp; Bass</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/mega_man_battle_network.zip">Megaman Battle Network</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/mega_man_battle_network_2.zip">Megaman Battle Network 2</a><div class="desc">Game completed</div></li>
+	<li>
+		<a href="gba/mega_man_zero.zip" class="verified">Megaman Zero</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Access Hard mode: hold <span class="trigger-l">L</span> while starting new game<br/>
+			Access Ultimate mode: hold <span class="trigger-r">R</span> while starting new game<br/>
+			Enable Jackson in Ultimate mode: hold <span class="button-a">A</span>
+		</div>
+	</li>
+	<li>
+		<a href="gba/mega_man_zero_2.zip" class="verified">Megaman Zero 2</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Access Hard mode: hold <span class="trigger-l">L</span> while starting new game<br/>
+			Access Gallery mode: hold <span class="trigger-l">L</span> + <span class="button">Select</span> while starting new game<br/>
+		</div>
+	</li>
+	<li>
+		<a href="gba/mega_man_zero_3.zip" class="verified">Megaman Zero 3</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Access Hard mode: hold <span class="trigger-l">L</span> while starting new game<br/>
+			Access Ultimate mode: hold <span class="trigger-r">R</span> while starting new game
+		</div>
+	</li>
+	<li>
+		<a href="gba/mega_man_zero_4.zip" class="verified">Megaman Zero 4</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			<ul>
+				<li>SLOT 3: Hard mode (game+, first mission)<br/>missing ScrapElf part and Elf Body chip, since they are unobtainable in Hard Mode</li>
+				<li>SLOT 4: Ultimate mode (game+, first mission)<br/>missing the S-Crystal sub-tanks</li>
+			</ul>
+		</div>
+	</li>
+	<li><a href="gba/metal_slug_advance.zip" class="verified">Metal Slug Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/metroid_fusion.zip" class="verified">Metroid: Fusion</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/metroid_zero_mission.zip" class="verified">Metroid: Zero Mission</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Access Time Attack mode: press <span class="dpad">&uarr;</span> <span class="dpad">&larr;</span> <span class="dpad">&rarr;</span> <span class="dpad">&darr;</span> after choosing an slot (before starting a new game)
+		</div>
+	</li>
+	<li><a href="gba/one_piece.zip" class="verified">Shonen's Jump One Piece</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/pokemon_emerald.zip" class="verified">Pokémon Emerald</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Living pokédex completed (all legit unless specified).<br/><br/>
+
+			* CELEBI was re-inserted from an USA savegame<br/>
+			* All special events (MEW, DEOXYS...) were activated through Gameshark (but were caught in-game)<br/>
+			* Emerald box clone glitch was used for cloning objects and a few Pokémon<br/><br/>
+
+			Last box:<br/>
+			* in-game trades<br/>
+			* SWABLU, ZIGZAGOON, SKITTY, PICHU and PICHU (egg): Pokémon Box<br/>
+			* a few legit FEEBAS<br/>
+			* hacked BULBASAURs with all HMs, just for fun
+		</div>
+	</li>
+	<li>
+		<a href="gba/pokemon_ruby.zip" class="verified">Pokémon Ruby</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Legit living pokédex.<br/>
+
+			* CELEBI was re-inserted from an USA savegame<br/>
+			* All shinies caught by RNG abuse<br/>
+			* Missing RS Pokémon got from FRLG<br/>
+			* Eon Ticket enabled by e-Card Reader<br/><br/>
+
+			Last box:<br/>
+			* in-game trades<br/>
+			* Pokémon Box eggs: SWABLU, ZIGZAGOON, SKITTY and PICHU<br/>
+			* Contest+Battle Tower ready Pokémon
+		</div>
+	</li>
+	<li><a href="gba/pokemon_pinball_ruby_sapphire.zip" class="verified">Pokémon Pinball: Ruby &amp; Sapphire</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/pokemon_fire_red.zip" class="verified">Pokémon Fire Red</a><div class="desc">Game 100% completed</div>
+		<div class="more">See Pokémon Emerald description</div>
+	</li>
+	<li><a href="gba/polarium_advance.zip" class="verified">Polarium Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/puyo_pop.zip" class="verified">Puyo Pop</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/racing_gears_advance.zip" class="verified">Racing Gears Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/rayman_advance.zip" class="verified">Rayman Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/rayman_3.zip" class="verified">Rayman 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/rhythm_tengoku.zip" class="verified">Rhythm Tengoku</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sabre_wulf.zip">Sabre Wulf</a><div class="desc">Missing some time trials</div></li>
+	<li><a href="gba/shantae_advance_risky_revolution.zip" class="verified">Shante Advance: Risky Revolution</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/shin_chan_aventuras_en_cineland.zip" class="verified">Shinchan: Aventuras en Cineland</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/shin_chan_contra_los_munecos_de_shock_gahn.zip" class="verified">Shinchan contra los muñecos de Shock Gahn</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sonic_advance.zip" class="verified">Sonic Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sonic_advance_2.zip" class="verified">Sonic Advance 2</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/sonic_advance_3.zip" class="verified">Sonic Advance 3</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Access Special Stage: <span class="dpad">&uarr;</span> <span class="trigger-r">R</span> <span class="dpad">&darr;</span> <span class="trigger-l">L</span> <span class="dpad">&rarr;</span> <span class="dpad">&larr;</span> on main menu
+		</div>
+	</li>
+	<li><a href="gba/sonic_pinball_party.zip" class="verified">Sonic Pinball Party</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="gba/super_ghouls_n_ghosts.zip" class="verified">Super Ghouls &#39;n Ghosts</a><div class="desc">Game completed</div>
+		<div class="more">
+			Original mode: saved in last boss (second run)<br/>
+			Arrange mode: saved in exclusive GBA levels (keep green/golden armor in order to stay in them)
+		</div>
+	</li>
+	<li><a href="gba/super_mario_advance.zip" class="verified">Super Mario Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sma2_super_mario_world.zip" class="verified">Super Mario Advance 2: Super Mario World</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sma3_yoshis_island.zip" class="verified">Yoshi&#39;s Island: Super Mario Advance 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/sma4_super_mario_bros_3.zip" class="verified">Super Mario Advance 4: Super Mario Bros. 3</a><div class="desc">Game 100% completed + e-World unlocked</div></li>
+	<li><a href="gba/super_mario_ball.zip" class="verified">Super Mario Ball</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/tekken_advance.zip" class="verified">Tekken Advance</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/the_lost_vikings.zip" class="verified">The lost vikings</a><div class="desc">Game completed</div></li>
+	<li><a href="gba/tony_hawks_pro_skater_2.zip" class="verified">Tony Hawk&#39;s Pro Skater 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/tony_hawks_pro_skater_3.zip" class="verified">Tony Hawk&#39;s Pro Skater 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/top_gear_rally.zip" class="verified">Top Gear Rally</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/vrally_3.zip" class="verified">V-Rally 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/wario_land_4.zip" class="verified">Wario Land 4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/warioware_inc.zip" class="verified">WarioWare Inc.</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/warioware_twisted.zip" class="verified">WarioWare Twisted!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/yoshis_universal_gravitation.zip" class="verified">Yoshi's Universal Gravitation</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/zelda_a_link_to_the_past.zip" class="verified">The Legend of Zelda: A link to the past</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gba/zelda_minish_cap.zip">The Legend of Zelda: Minish Cap</a><div class="desc">Missed light arrows</div></li>
+	<li>
+		<a href="gba/zelda_nes_classics.zip">NES Classics: The legend of Zelda</a><div class="desc">Game 100% completed</div>
+		<div class="more">Unfortunately, I didn&#39;t know the game overwrites your savegame after completing the first quest, so I don&#39;t keep the savegame before Ganon battle</div>
+	</li>
+	<li><a href="gba/zelda_2_nes_classics.zip" class="verified">NES Classics: Zelda II: The adventure of Link</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO DS -->
+<div class="h2-container"><h2 class="wrapper">Nintendo DS savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="nds/42_all_time_classics_clubhouse_games.zip">42 All-Time Classics / Clubhouse games</a><div class="desc">All games and modes unlocked. Missing card designs and stamps.</div></li>
+	<li><a href="nds/ace_attorney_1_phoenix_wright.zip" class="verified">Ace Attorney: Phoenix Wright</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/ace_attorney_2_justice_for_all.zip" class="verified">Ace Attorney 2: Justice For All</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/ace_attorney_3_trials_and_tribulations.zip" class="verified">Ace Attorney 3: Trials &amp; Tribulations</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/ace_attorney_4_apollo_justice.zip" class="verified">Ace Attorney 4: Apollo Justice</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/ace_attorney_investigations.zip" class="verified">Ace Attorney Investigations: Miles Edgeworth</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/american_dragon_jake_long.zip" class="verified">American Dragon: Jake Long</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/another_code.zip">Another Code: Two Memories</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/batman_the_brave_and_the_bold.zip" class="verified">Batman: The Brave and the Bold</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/big_brain_academy.zip">Big Brain Academy</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/castlevania_dawn_of_sorrow.zip" class="verified">Castlevania: Dawn of Sorrow</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/castlevania_portrait_of_ruin.zip" class="verified">Castlevania: Portrait of Ruin</a><div class="desc">Game 1000% completed</div></li>
+	<li><a href="nds/castlevania_order_of_ecclesia.zip" class="verified">Castlevania: Order of Ecclesia</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/contra_4.zip">Contra 4</a><div class="desc">Missing 16 challenges</div></li>
+	<li><a href="nds/crash_of_the_titans.zip" class="verified">Crash of the Titans</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/daigasso_band_brothers.zip" class="verified">Daigasso Band Brothers</a><div class="desc">Might be missing some unlockables</div></li>
+	<li><a href="nds/densetsu_no_stafy_4.zip" class="verified">Densetsu no Stafy 4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/the_legendary_starfy.zip" class="verified">The legendary Starfy</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/diddy_kong_racing_ds.zip" class="verified">Diddy Kong Racing DS</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/donkey_kong_jungle_climber.zip" class="verified">Donkey Kong: Jungle Climber</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/dragon_ball_kai_ultimate_butouden.zip" class="verified">Dragon Ball Kai: Ultimate Butouden</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/dragon_ball_z_supersonic_warriors_2.zip" class="verified">Dragon Ball Z: Supersonic Warriors 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/drawn_to_life.zip" class="verified">Drawn To Life</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/elite_beat_agents.zip" class="verified">Elite Beat Agents</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/final_fantasy_crystal_chronicles_ring_of_fates.zip" class="verified">Final Fantasy Crystal Chronicles: Ring Of Fates</a><div class="desc">Missing a few items</div></li>
+	<li><a href="nds/final_fantasy_crystal_chronicles_echoes_of_time.zip">Final Fantasy Crystal Chronicles: Echoes of Time</a><div class="desc">Game completed, all materials and hacked Mythic Beast scrolls and an unused helmet</div></li>
+	<li><a href="nds/final_fantasy_fables_chocobo_tales.zip" class="verified">Final Fantasy Fables: Chocobo Tales</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/final_fantasy_3.zip">Final Fantasy III</a><div class="desc">Game completed, a save editor was used</div></li>
+	<li><a href="nds/final_fantasy_4.zip">Final Fantasy IV</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/final_fantasy_the_4_heroes_of_light.zip">Final Fantasy: The 4 heroes of light</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/ghost_trick_phantom_detective.zip" class="verified">Ghost Trick: Phantom Detective</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/henry_hatsworth.zip">Henry Hatsworth in the Puzzling Adventure</a><div class="desc">Game 98% completed</div></li>
+	<li><a href="nds/hotel_dusk_room_215.zip" class="verified">Hotel Dusk: Room 215</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/jump_super_stars.zip" class="verified">Jump Super Stars</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/jump_ultimate_stars.zip" class="verified">Jump Ultimate Stars</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/kirby_power_paintbrush.zip" class="verified">Kirby: Power Paintbrush</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/kirby_mouse_attack.zip" class="verified">Kirby Mouse Attack</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/kirby_super_star_ultra.zip" class="verified">Kirby Super Star Ultra</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/kirby_mass_attack.zip">Kirby Mass Attack</a><div class="desc">Missing some achievements</div></li>
+	<li><a href="nds/last_window.zip" class="verified">Last Window: The Secret of Cape West</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/lostmagic.zip">LostMagic</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/mario_and_luigi_2.zip">Mario &amp; Luigi 2: Partners in time</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/mario_and_luigi_3.zip">Mario &amp; Luigi 3: Bowser&#39;s Inside Story</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/mario_kart_ds.zip" class="verified">Mario Kart DS</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/mario_party_ds.zip" class="verified">Mario Party DS</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/mario_slam_basketball.zip">Mario Slam Basketball</a><div class="desc">Missing some unlockables</div></li>
+	<li><a href="nds/mario_vs_donkey_kong_2.zip" class="verified">Mario VS Donkey Kong 2: March of the Minis</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/mario_vs_donkey_kong_3.zip" class="verified">Mario VS Donkey Kong 3: Minis march again!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/mario_vs_donkey_kong_4.zip" class="verified">Mario VS Donkey Kong 4: Mini-Land Mayhem</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/megaman_zero_collection.zip" class="verified">Megaman Zero Collection</a><div class="desc">Game 100% completed (see separate GBA games)</div></li>
+	<li><a href="nds/megaman_zx.zip" class="verified">Megaman ZX</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/megaman_zx_advent.zip" class="verified">Megaman ZX Advent</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/meteos.zip" class="verified">Meteos</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/metroid_prime_hunters.zip">Metroid Prime Hunters</a><div class="desc">Missing some scans and multiplayer levels, and an energy tank</div></li>
+	<li><a href="nds/metroid_prime_pinball.zip" class="verified">Metroid Prime: Pinball</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/michael_jackson_the_experience.zip" class="verified">Michael Jackson: The Experience</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/monster_tale.zip" class="verified">Monster Tale</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/n_plus.zip" class="verified">N+</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/new_super_mario_bros.zip" class="verified">NEW Super Mario Bros.</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/ouendan.zip" class="verified">Osu! Tatakae! Ouendan</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/ouendan_2.zip">Osu! Tatakae! Ouendan 2</a><div class="desc">Missing three S on Insane Mode</div></li>
+	<li><a href="nds/pac_n_roll.zip">Pac &#39;n Roll</a><div class="desc">Missing some gems</div></li>
+	<li><a href="nds/picross_3d.zip" class="verified">Picross 3D</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/picross_ds.zip" class="verified">Picross DS</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="nds/pokemon_pearl.zip" class="verified">Pokémon Pearl Version</a><div class="desc">Legit living Pokédex. Missing Battle Frontier and Super Contests</div>
+		<div class="more">
+			Replayed on August 2018.
+			Full legit Pokédex by combining DPPt+HGSS+Ranger+PBR+Ranch<br/>
+
+			* All shinies are legit, caught by RNG abuse<br/>
+			* Diamond exclusives were caught by savegame swap<br/>
+			* Stationaries and events are ready to be fought at anytime<br/>
+			* All legit Wi-Fi events released in Spain<br/>
+			* Some legit Pokéradar/trades/transfer shinies from my old 2007 savegame
+		</div>
+	</li>
+	<li>
+		<a href="nds/pokemon_platinum.zip" class="verified">Pokémon Platinum Version</a><div class="desc">Game 99% completed</div>
+		<div class="more">
+			Legit living pokédex.<br/>
+			Missing: Battle Frontier and Super Contests.<br/><br/>
+
+			* Traded from other games (HGSS/Channel/Ranger/PBR): starters, Manaphy, Jirachi, Surf Pikachu, Electivire/Magmortar<br/>
+			* Wi-Fi events from DPPt/HGSS: Shaymin, Regigigas, Jirachi, Mew, Celebi, Shiny Johto Trio, Shiny Pichu<br/>
+			* All shinies are legit (mostly Pokéradar and some trades/transfers)<br/>
+			* (2018 update!) Legit shiny Regis caught by RNG abuse
+		</div>
+	</li>
+	<li>
+		<a href="nds/pokemon_heartgold.zip" class="verified">Pokémon HeartGold Version</a><div class="desc">Game 99% completed</div>
+		<div class="more">
+			Missing some Pokewalker routes<br/>
+			Second Arceus in-game event is ready to be completed at any time<br/>
+			* (2018 update!) Legit shiny starters, stationaries, gifts and legendaries caught by RNG abuse (SS exclusives were caught by savegame swap)
+		</div>
+	</li>
+	<li><a href="nds/pokemon_black.rar" class="verified">Pokémon Black Version</a><div class="desc">Game 99% completed</div></li>
+	<li><a href="nds/pokemon_white_2.rar" class="verified">Pokémon White Version 2</a><div class="desc">Game 99% completed</div></li>
+	<li><a href="nds/pokemon_mystery_dungeon_blue_rescue_team.zip">Pokémon Mystery Dungeon: Blue Rescue Team</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/polarium.zip" class="verified">Polarium</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/profesor_layton_1.zip" class="verified">Professor Layton and the Curious Village</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/profesor_layton_2.zip" class="verified">Professor Layton and the Diabolical Box</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/profesor_layton_3.zip" class="verified">Professor Layton and the Unwound Future</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/profesor_layton_4.zip">Professor Layton and the Last Specter</a><div class="desc">Missing Layton 5 (3DS) extras</div></li>
+	<li><a href="nds/project_rub.zip" class="verified">Project Rub</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/resident_evil_deadly_silence.zip" class="verified">Resident Evil: Deadly Silence</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/rhythm_paradise.zip" class="verified">Rhythm Paradise</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/the_rub_rabbits.zip">The Rub Rabbits!</a><div class="desc">Missing a few clothes</div></li>
+	<li><a href="nds/sonic_rush.zip" class="verified">Sonic Rush</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/sonic_rush_adventure.zip" class="verified">Sonic Rush Adventure</a><div class="desc">Missing optional missions</div></li>
+	<li><a href="nds/soul_bubbles.zip" class="verified">Soul Bubbles</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/sudoku_master.zip" class="verified">Sudoku Master</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/super_mario_64_ds.zip" class="verified">Super Mario 64 DS</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/super_princess_peach.zip" class="verified">Super Princess Peach</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/tetris_ds.zip" class="verified">Tetris DS</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/thor_god_of_thunder.zip" class="verified">Thor: God of Thunder</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/tingles_balloon_fight.zip" class="verified">Tingle&#39;s Balloon Fight</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/trauma_center_under_the_knife.zip">Trauma Center: Under the knife</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/tony_hawks_american_sk8land.zip">Tony Hawk's American Sk8land</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/viewtiful_joe_double_trouble.zip">Viewtiful Joe: Double Trouble</a><div class="desc">Game completed</div></li>
+	<li><a href="nds/warioware_touched.zip" class="verified">WarioWare: Touched!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/worms_open_warfare_2.zip" class="verified">Worms: Open Warfare 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/yoshi_touch_and_go.zip" class="verified">Yoshi: Touch &amp; Go</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="nds/yoshis_island_ds.zip">Yoshi&#39;s Island DS</a><div class="desc">Missing some gold coins and museum enemies</div></li>
+	<li><a href="nds/zelda_phantom_hourglass.zip">The legend of Zelda: Phantom Hourglass</a><div class="desc">Missing some ship parts</div></li>
+	<li><a href="nds/zelda_spirit_tracks.zip">The legend of Zelda: Spirit Tracks</a><div class="desc">Missing some train parts</div></li>
+</ol>
+
+
+
+<!-- NINTENDO 3DS -->
+<div class="h2-container"><h2 class="wrapper">Nintendo 3DS savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="3ds/ace_attorney_5_dual_destinies.zip" class="verified">Ace Attorney 5: Dual Destinies</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/ace_attorney_6_spirit_of_justice.zip" class="verified">Ace Attorney 6: Spirit of Justice</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/dai_gyakuten_saiban.zip" class="verified">Dai Gyakuten Saiban: Naruhodou Ryuunosuke no Bouken</a><div class="desc">Game completed</div></li>
+	<li><a href="3ds/castlevania_lords_of_shadow_mirror_of_fate.zip" class="verified">Castlevania - Lords of shadow - Mirror of fate</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/cave_story_3d.zip" class="verified">Cave Story 3D</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/code_name_steam.zip">Code Name S.T.E.A.M.</a><div class="desc">All amiibo unlocked. Missing some subweapons</div></li>
+	<li>
+		<a href="3ds/dragon_quest_7.zip" class="verified">Dragon Quest VII: Fragments of the Forgotten Past</a><div class="desc">Missing some Monster Meadows recruits</div>
+		<div class="more">Missing recruits: 17, 19, 22, 26, 28, 31, 32, 35, 36, 39, 40, 41, 42, 45, 46, 49, 53, 56, 63, 73, 74, 81, 85, 89, 92, 99, 112, 115, 116, 117, 118, 123, 188, 216, 239, 248, 269, 271, DLC42 (needed DLC is included in the savegame)</div>
+	</li>
+	<li><a href="3ds/ever_oasis.zip">Ever Oasis</a><div class="desc">Missing some sidequests</div></li>
+	<li><a href="3ds/final_fantasy_explorers.zip" class="verified">Final Fantasy: Explorers</a><div class="desc">Everything is unlocked. Missing some quests and subquests</div></li>
+	<li><a href="3ds/hey_pikmin.zip" class="verified">Hey! Pikmin</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/kid_icarus_uprising.zip" class="verified">Kid Icarus: Uprising</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="3ds/kirby_battle_royale.zip" class="verified">Kirby Battle Royale</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/kirby_planet_robobot.zip" class="verified">Kirby: Planet Robobot</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/kirby_triple_deluxe.zip" class="verified">Kirby: Triple Deluxe</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/luigis_mansion_2.zip" class="verified">Luigi&#39;s Mansion 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/mario_golf_world_tour.zip">Mario Golf: World Tour</a><div class="desc">Missing online-only costumes</div></li>
+	<li><a href="3ds/metroid_prime_federation_force.zip">Metroid Prime: Federation Force</a><div class="desc">Missing some costumes</div></li>
+	<li><a href="3ds/metroid_samus_returns.zip">Metroid: Samus Returns</a><div class="desc">Missing amiibo extras</div></li>
+	<li><a href="3ds/picross_3d_round_2.zip" class="verified">Picross 3D Round 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/pilotwings_resort.zip">Pilotwings Resort</a><div class="desc">Missing perfect scores+alternative ending</div></li>
+	<li>
+		<a href="3ds/pokemon_y.zip" class="verified">Pokémon Y</a><div class="desc">Game 99% completed</div>
+		<div class="more">
+			Full legit Pokédex by combining XY+ORAS.<br/>
+			All spanish events obtained (Wondercards are distributed in both my Y+OR savegames).<br/>
+			May be missing a few bits, but almost everything is got and/or completed in-game.<br/>
+			As a bonus, I include some competitive Pokémon and 6IV Dittos.
+		</div>
+	</li>
+	<li>
+		<a href="3ds/pokemon_omega_ruby.zip" class="verified">Pokémon Omega Ruby</a><div class="desc">Game 99% completed</div>
+		<div class="more">See Pokémon Y notes</div>
+	</li>
+	<li><a href="3ds/pokemon_sun.zip" class="verified">Pokémon Sun</a><div class="desc">Missing Battle Royal and Battle Tree</div></li>
+	<li><a href="3ds/pokemon_ultra_sun.zip" class="verified">Pokémon Ultra Sun</a><div class="desc">Missing Battle Royal and Battle Tree</div></li>
+	<li><a href="3ds/resident_evil_the_mercenaries_3d.zip" class="verified">Resident Evil: The mercenaries 3D</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/rhythm_paradise_megamix.zip" class="verified">Rhythm Paradise Megamix</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/shovel_knight.zip" class="verified">Shovel Knight</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/super_mario_3d_land.zip">Super Mario 3D Land</a><div class="desc">Missing shiny stars in save slot</div></li>
+	<li><a href="3ds/sushi_striker_the_way_of_sushido.zip" class="verified">Sushi Striker: The way of Sushido</a><div class="desc">All levels and spirits unlocked (including Kyatten, unlocked by cheating)</div></li>
+	<li><a href="3ds/ultimate_nes_remix.zip" class="verified">Ultimate NES Remix</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/warioware_gold.zip" class="verified">WarioWare Gold</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/zelda_a_link_between_worlds.zip" class="verified">The legend of Zelda: A link between worlds</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/zelda_majoras_mask_3d.zip" class="verified">The legend of Zelda: Majora&#39;s Mask 3D</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="3ds/zelda_ocarina_of_time_3d.zip">The legend of Zelda: Ocarina of time 3D</a><div class="desc">Missing some gold skulltulas in Master Quest</div>
+		<div class="more">Master Quest is missing some gold skulltulas</div>
+	</li>
+	<li><a href="3ds/zelda_tri_force_heroes.zip">The legend of Zelda: Tri Force Heroes</a><div class="desc">Need 10 more Hero Points for Bear Minimum Digs enhancement</div></li>
+	<li><a href="3ds/chibi_robo_zip_lash.zip">Chibi-Robo!: Zip Lash</a><div class="desc">Missing some figurines</div></li>
+	<li><a href="3ds/code_of_princess.zip" class="verified">Code of Princess</a><div class="desc">Everything is unlocked, just missing some items</div></li>
+	<li><a href="3ds/detective_pikachu.zip" class="verified">Detective Pikachu</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/epic_mickey_power_of_illusion.zip" class="verified">Epic Mickey: Power of illusion</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/laytons_mystery_journey.zip" class="verified">Layton&#39;s Mystery Journey</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/mario_kart_7.zip" class="verified">Mario Kart 7</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/mario_tennis_open.zip">Mario Tennis: Open</a><div class="desc">Missing some costumes</div></li>
+	<li><a href="3ds/megaman_legacy_collection.zip">Mega Man Legacy Collection</a><div class="desc">Missing a gold medal in Amiibo challenges</div></li>
+	<li><a href="3ds/new_super_mario_bros_2.zip">New Super Mario Bros. 2</a><div class="desc">Missing the million of coins</div></li>
+	<li><a href="3ds/resident_evil_revelations.zip" class="verified">Resident Evil: Revelations</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/rhythm_thief.zip">Rhythm Thief &amp; the Emperor&#39;s Treasure</a><div class="desc">Game completed</div></li>
+	<li><a href="3ds/shinobi.zip">Shinobi</a><div class="desc">Missing some extras</div></li>
+	<li><a href="3ds/sonic_generations.zip" class="verified">Sonic Generations</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/star_fox_64_3d.zip">Star Fox 64 3D</a><div class="desc">Missing Score Attack mode</div></li>
+	<li><a href="3ds/super_mario_maker_for_nintendo_3ds.zip">Super Mario Maker for Nintendo 3DS</a><div class="desc">Missing some medals</div></li>
+	<li><a href="3ds/the_adventures_of_tintin.zip" class="verified">The adventures of Tintin: The secret of the unicorn</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/yoshis_new_island.zip" class="verified">Yoshi&#39;s New Island</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO 3DS ESHOP -->
+<div class="h2-container"><h2 class="wrapper">Nintendo 3DS eShop savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="3ds/eshop/azure_striker_gunvolt.zip">Azure Striker Gunvolt</a><div class="desc">All audiolockets unlocked. Missing some challenges</div></li>
+	<li><a href="3ds/eshop/boxboy.zip" class="verified">BOXBOY!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/boxboxboy.zip" class="verified">BOXBOXBOY!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/bye_bye_boxboy.zip" class="verified">BYE-BYE BOXBOY!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/chase_cold_case_investigations.zip" class="verified">Chase: Cold Case Investigations</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/chicken_wiggle.zip" class="verified">Chicken Wiggle</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/club_nintendo_picross.zip" class="verified">Club Nintendo Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/club_nintendo_picross_plus.zip" class="verified">Club Nintendo Picross Plus</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/dedede_drum_dash_deluxe.zip" class="verified">Dedede&#39;s Drum Dash Deluxe</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/gunman_clive.zip" class="verified">Gunman Clive</a><div class="desc">Game completed</div></li>
+	<li><a href="3ds/eshop/gunman_clive_2.zip" class="verified">Gunman Clive 2</a><div class="desc">Game completed</div></li>
+	<li><a href="3ds/eshop/harmoknight.zip" class="verified">HarmoKnight</a><div class="desc">Missing gold medals in secret world (hard only)</div></li>
+	<li><a href="3ds/eshop/kirby_blowout_blast.zip" class="verified">Kirby&#39;s Blowout Blast</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/mario_and_donkey_kong_minis_on_the_move.zip" class="verified">Mario and Donkey Kong: Minis on the move</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/mighty_switch_force.zip" class="verified">Mighty Switch Force!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/mighty_switch_force_2.zip" class="verified">Mighty Switch Force! 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/mini_mario_and_friends_amiibo_challenge.zip" class="verified">Mini Mario &amp; Friends: amiibo Challenge</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/mutant_mudds.zip" class="verified">Mutant Mudds</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/my_nintendo_picross_zelda_twilight_princess.zip" class="verified">My Nintendo PICROSS: The legend of Zelda: Twilight Princess</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e.zip" class="verified">Picross e</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e2.zip" class="verified">Picross e2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e3.zip" class="verified">Picross e3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e4.zip" class="verified">Picross e4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e5.zip" class="verified">Picross e5</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e6.zip" class="verified">Picross e6</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e7.zip" class="verified">Picross e7</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e8.zip" class="verified">Picross e8</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/picross_e9.zip" class="verified">Picross e9</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/pictlogica_final_fantasy.zip">Pictlogica Final Fantasy</a><div class="desc">Missing some Memorias and achievements</div></li>
+	<li><a href="3ds/eshop/pokemon_shuffle.zip" class="verified">Pokémon Shuffle</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/pokemon_picross.zip" class="verified">Pokémon Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/pullblox.zip" class="verified">Pullblox</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/sanrio_characters_picross.zip" class="verified">Sanrio characters Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/shantae_and_the_pirates_curse.zip" class="verified">Shantae and the Pirate's Curse</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/steel_empire.zip">Steel Empire</a><div class="desc">Missing latest achievement</div></li>
+	<li><a href="3ds/eshop/team_kirby_clash_deluxe.zip" class="verified">Team Kirby Clash Deluxe</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="3ds/eshop/the_delusions_of_von_sottendorff_and_his_squared_mind.zip" class="verified">The Delusions of Von Sottendorff and His Squared Mind</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO ENTERTAINMENT SYSTEM -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Entertainment System savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="other/nes/kirbys_adventure.zip" class="verified">Kirby&#39;s Adventure</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/megaman_2.png" class="verified">Mega Man 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/megaman_3.png" class="verified">Mega Man 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/megaman_4.png" class="verified">Mega Man 4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/megaman_5.png" class="verified">Mega Man 5</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/megaman_6.png" class="verified">Mega Man 6</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/nes/zelda_2.zip" class="verified">Zelda II: The adventure of Link</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SUPER NES -->
+<div class="h2-container"><h2 class="wrapper">Super NES savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="snes/demons_crest.png" class="verified">Demon&#39;s crest</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/donkey_kong_country.zip" class="verified">Donkey Kong Country</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="snes/donkey_kong_country_2.zip" class="verified">Donkey Kong Country 2: Diddy Kong&#39;s Quest</a><div class="desc">Game 102% completed</div></li>
+	<li><a href="snes/donkey_kong_country_3.zip" class="verified">Donkey Kong Country 3: Dixie Kong&#39;s Double Trouble</a><div class="desc">Game 105% completed</div></li>
+	<li><a href="snes/kirbys_dream_land_3.zip" class="verified">Kirby&#39;s Dream Land 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/kirby_no_kirakira_kids.zip" class="verified">Kirby no KiraKira Kids</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/kirby_super_star_fun_pak.zip" class="verified">Kirby&#39;s Super Star / Fun Pak</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/zelda_a_link_to_the_past.zip" class="verified">The legend of Zelda: A link to the past</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/mario_no_super_picross.zip" class="verified">Mario no Super Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/rockman_and_forte.zip" class="verified">Rockman &amp; Forte</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="snes/super_mario_kart.zip" class="verified">Super Mario Kart</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Hold <span class="trigger-l">L</span> while selecting Ghost Valley 1 in Time Trial to race my saved ghost (will only play correctly in 60hz).
+		</div>
+	</li>
+	<li>
+		<a href="snes/super_mario_all_stars.zip" class="verified">Super Mario All-Stars</a><div class="desc">Game 100% completed</div>
+		<div class="more">
+			Compatible with +SMW version too
+		</div>
+	</li>
+	<li><a href="snes/super_mario_world.zip" class="verified">Super Mario World</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/super_mario_world_2_yoshis_island.zip" class="verified">Super Mario World 2: Yoshi's Island</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="snes/super_metroid.zip" class="verified">Super Metroid</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO 64 -->
+<div class="h2-container"><h2 class="wrapper">Nintendo 64 savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="n64/banjo_kazooie.zip" class="verified">Banjo-Kazooie</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/diddy_kong_racing.zip" class="verified">Diddy Kong Racing</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/donkey_kong_64.zip" class="verified">Donkey Kong 64</a><div class="desc">Game 101% completed</div></li>
+	<li><a href="n64/dr_mario_64.zip" class="verified">Dr. Mario 64</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/kirby_64_the_crystal_shards.zip" class="verified">Kirby 64: The crystal shards</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/mario_golf.zip" class="verified">Mario Golf</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/mario_kart_64.zip" class="verified">Mario Kart 64</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/mario_tennis.zip" class="verified">Mario Tennis</a><div class="desc">Missing star tournament</div></li>
+	<li><a href="n64/sin_and_punishment.zip" class="verified">Sin &amp; Punishment</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/super_mario_64.zip" class="verified">Super Mario 64</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/super_smash_bros.zip" class="verified">Super Smash Bros.</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/wave_race_64.zip" class="verified">Wave Race 64</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/yoshis_story.zip" class="verified">Yoshi&#39;s Story</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/zelda_majoras_mask.zip" class="verified">The legend of Zelda: Majora&#39;s Mask</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="n64/zelda_ocarina_of_time.zip" class="verified">The legend of Zelda: Ocarina of Time</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO GAMECUBE -->
+<div class="h2-container"><h2 class="wrapper">Nintendo GameCube savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="gc/battalion_wars.zip">Battalion Wars</a><div class="desc">Game completed</div></li>
+	<li><a href="gc/billy_hatcher_and_the_giant_egg.zip">Billy Hatcher and the Giant Egg</a><div class="desc">Missing eggs 58 and 64 and a some coins</div></li>
+	<li><a href="gc/donkey_kong_jungle_beat.zip" class="verified">Donkey Kong: Jungle Beat</a><div class="desc">Missing most of platinum medals</div></li>
+	<li><a href="gc/fzero_gx.zip">F-Zero GX</a><div class="desc">Missing story mode</div></li>
+	<li><a href="gc/final_fantasy_crystal_chronicles.zip">Final Fantasy Crystal Chronicles</a><div class="desc">Missing a few artifacts for Lilty characters</div></li>
+	<li><a href="gc/luigis_mansion.zip">Luigi&#39;s Mansion</a><div class="desc">Missing boss gold frames</div></li>
+	<li><a href="gc/mario_golf_toadstool_tour.zip" class="verified">Mario Golf: Toadstool Tour</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/mario_kart_double_dash.zip" class="verified">Mario Kart Double Dash!!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/mario_smash_football.zip">Mario Smash Football</a><div class="desc">Missing some cheats</div></li>
+	<li><a href="gc/metal_gear_solid_the_twin_snakes.zip">Metal Gear Solid: The Twin Snakes</a><div class="desc">Missing Dog-Tags in HARD and EXTREME modes</div></li>
+	<li><a href="gc/pikmin.zip" class="verified">Pikmin</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/resident_evil_4.zip">Resident Evil 4</a><div class="desc">Game completed</div></li>
+	<li><a href="gc/soul_calibur_2.zip" class="verified">Soul Calibur 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/super_mario_sunshine.zip" class="verified">Super Mario Sunshine</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/super_smash_bros_melee.zip">Super Smash Bros. Melee</a><div class="desc">Missing a few trophies</div></li>
+	<li>
+		<a href="gc/zelda_collectors_edition.zip" class="verified">The Legend of Zelda: Collector&#39;s Edition</a><div class="desc">Game 100% completed</div>
+		<div class="more">used infinite gold Skulltula glitch in OoT</div>
+	</li>
+	<li><a href="gc/zelda_four_swords_adventures.zip" class="verified">The Legend of Zelda: Four Swords Adventures</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/zelda_the_wind_waker.zip" class="verified">The Legend of Zelda: The Wind Waker</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="gc/zelda_twilight_princess.zip">The Legend of Zelda: Twilight Princess</a><div class="desc">Missing a few spirits</div></li>
+</ol>
+
+
+
+<!-- NINTENDO WII -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Wii savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="wii/donkey_kong_country_returns.zip">Donkey Kong Country Returns</a><div class="desc">Missing mirror mode</div></li>
+	<li><a href="wii/epic_mickey.zip">Epic Mickey</a><div class="desc">Missed three missions and other extras</div></li>
+	<li><a href="wii/kirby_adventure_wii.zip" class="verified">Kirby&#39;s adventure Wii</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/kirbys_dream_collection_special_edition.zip" class="verified">Kirby&#39;s Dream Collection: Special Edition</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/kirby_epic_yarn.zip" class="verified">Kirby&#39;s Epic Yarn</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/links_crossbow_training.zip" class="verified">Link&#39;s Crossbow Training</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/metroid_other_m.zip" class="verified">Metroid: Other M</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="wii/metroid_prime_trilogy.zip">Metroid Prime Trilogy</a><div class="desc">Game 99% completed</div>
+		<div class="more">
+			<ul>
+				<li>
+					<strong>Metroid Prime</strong><br/>
+					Missing 8% from Log Book (thus, a Silver Credit)
+				</li>
+				<li>
+					<strong>Metroid Prime 2</strong><br/>
+					Missing 9% from Log Book
+				</li>
+				<li>
+					<strong>Metroid Prime 3</strong><br/>
+					Missing 19 Yellow Credits
+					<ul>
+						<li>Save all 12 Demolition Troopers at Pirate Transit Station 0205</li>
+						<li>Defeat 18 bosses on Hypermode difficulty (one credit per boss)</li>
+						<li>Missing 1 Friend Voucher</li>
+						<li>Escape from Meta Ridley as Morphball without taking damage (optional as there are more than enough Friend Vouchers in the game)</li>
+					</ul>
+				</li>
+			</ul>
+			
+		</div>
+	</li>
+	<li><a href="wii/new_super_mario_bros_wii.zip" class="verified">NEW Super Mario Bros. Wii</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/pikmin_2.zip">Pikmin 2</a><div class="desc">Missing challenge mode</div></li>
+	<li><a href="wii/rayman_origins.zip">Rayman Origins</a><div class="desc">Missing some electoons and time trials</div></li>
+	<li><a href="wii/red_steel_2.zip" class="verified">Red Steel 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/resident_evil_the_darkside_chronicles.zip" class="verified">Resident Evil: The Darkside Chronicles</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/resident_evil_the_umbrella_chronicles.zip" class="verified">Resident Evil: The Umbrella chronicles</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/super_mario_galaxy.zip" class="verified">Super Mario Galaxy</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/super_mario_galaxy_2.zip" class="verified">Super Mario Galaxy 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/super_smash_bros_brawl.zip" class="verified">Super Smash Bros. Brawl</a><div class="desc">Missing ~30 stickers</div></li>
+	<li><a href="wii/wario_land_the_shake_dimension.zip" class="verified">Wario Land: The shake dimension</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/zack_and_wiki.zip" class="verified">Zack & Wiki: Quest for Barbaros&#39; Treasure</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/zelda_skyward_sword.zip">The legend of Zelda: Skyward Sword</a><div class="desc">Missing boss rush minigame</div></li>
+
+	<li><a href="wii/a_boy_and_his_blob.zip" class="verified">A boy and his blob</a><div class="desc">Game 100% completed</div></li>
+	<li>
+		<a href="wii/a_shadows_tale.zip" class="verified">A shadow&#39;s tale</a><div class="desc">Game 100% completed</div>
+		<div class="more">Press <span class="button">C</span> while loading a savegame to get a new weapon. Press <span class="button">Z</span> while loading a savegame to get a new weapon.</div>
+	</li>
+	<li><a href="wii/another_code_2.zip" class="verified">Another code: R - A Journey into Lost Memories</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/rhythm_paradise.zip">Beat the beat: Rhythm Paradise</a><div class="desc">Missing some perfect P campaigns</div></li>
+	<li><a href="wii/deadly_creatures.zip">Deadly Creatures</a><div class="desc">Missing some extras</div></li>
+	<li><a href="wii/dead_space_extraction.zip">Dead Space: Extraction</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/disaster_day_of_crisis.zip">Disaster: Day of crisis</a><div class="desc">Missing some Stamina Campaigns and suits</div></li>
+	<li><a href="wii/endless_ocean.zip" class="verified">Endless Ocean</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/endless_ocean_2.zip">Endless Ocean 2</a><div class="desc">Missing some achievements</div></li>
+	<li><a href="wii/excite_truck.zip">Excite Truck</a><div class="desc">Mirror race mode unlocked and half completed</div></li>
+	<li><a href="wii/the_house_of_the_dead_2_and_3_return.zip">The house of the dead 2 &amp; Return</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/klonoa.zip" class="verified">Klonoa</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/kororinpa.zip">Kororinpa</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/lego_batman_the_videogame.zip">LEGO Batman: The videogame</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/lego_harry_potter.zip" class="verified">LEGO Harry Potter: Years 1-4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/lego_star_wars_the_complete_saga.zip" class="verified">LEGO Star Wars: The complete saga</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/madworld.zip" class="verified">MadWorld</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/mario_kart_wii.zip">Mario Kart Wii</a><div class="desc">Missing three stars in most cups</div></li>
+	<li><a href="wii/the_munchables.zip" class="verified">The Munchables</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/no_more_heroes.zip" class="verified">No more heroes</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/punch_out.zip">Punch-Out!!</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/sin_and_punishment_2.zip">Sin and Punishment 2: Successor of the Skies</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/sonic_colours.zip">Sonic Colours</a><div class="desc">Game completed</div></li>
+	<li><a href="wii/super_paper_mario.zip">Super Paper Mario</a><div class="desc">Game completed</div></li>
+</ol>
+
+
+
+<!-- WIIWARE -->
+<div class="h2-container"><h2 class="wrapper">WiiWare savegames</h2></div>
+<ol class="wrapper">
+	<li>
+		<a href="wii/wiiware/castlevania_the_adventure_rebirth.zip" class="verified">Castlevania: The Adventure ReBirth</a><div class="desc">Game 100% completed</div>
+		<div class="more">Hold <span class="dpad">&rarr;</span> in title menu to select level</div>
+	</li>
+	<li><a href="wii/wiiware/driift_mania.zip" class="verified">Driift Mania</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/wiiware/excitebike_world_challenge.zip">Excitebike: World Challenge</a><div class="desc">Missing on-line unlockables</div></li>
+	<li><a href="wii/wiiware/lostwinds.zip" class="verified">LostWinds</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/wiiware/lostwinds_winter_of_the_melodias.zip" class="verified">LostWinds: Winter of the Melodias</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wii/wiiware/megaman_9.zip" class="verified">Mega Man 9</a><div class="desc">Missing some challenges</div></li>
+	<li><a href="wii/wiiware/megaman_10.zip" class="verified">Mega Man 10</a><div class="desc">Missing some challenges</div></li>
+	<li><a href="wii/wiiware/world_of_goo.zip" class="verified">World of goo</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO WII U -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Wii U savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="wiiu/bayonetta.zip">Bayonetta</a><div class="desc">Game completed</div></li>
+	<li><a href="wiiu/bayonetta_2.zip">Bayonetta 2</a><div class="desc">Game completed</div></li>
+	<li><a href="wiiu/captain_toad_treasure_tracker.zip" class="verified">Captain Toad: Treasure Tracker</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/devils_third.zip">Devil&#39;s Third</a><div class="desc">Game completed</div></li>
+	<li><a href="wiiu/donkey_kong_country_tropical_freeze.zip">Donkey Kong Country: Tropical Freeze</a><div class="desc">Missing hard mode</div></li>
+	<li>
+		<a href="wiiu/hyrule_warriors.zip">Hyrule Warriors</a><div class="desc">Game 90% completed</div>
+		<div class="more">All characters unlocked. Missing adventure map, skulltula and achievements</div>
+	</li>
+	<li><a href="wiiu/kirby_rainbow_curse.zip">Kirby and the Rainbow Curse</a><div class="desc">Game 99% completed</div></li>
+	<li><a href="wiiu/mario_kart_8.zip" class="verified">Mario Kart 8</a><div class="desc">Game 100% completed [v4.1]</div></li>
+	<li><a href="wiiu/new_super_mario_bros_u.zip">New Super Mario Bros. U</a><div class="desc">Missing a few challenges</div></li>
+	<li><a href="wiiu/new_super_mario_bros_u_luigi_u.zip">New Super Mario Bros. U + New Super Luigi U</a><div class="desc">Missing a few Mario challenges</div></li>
+	<li><a href="wiiu/nintendo_land.zip">Nintendo Land</a><div class="desc">Missing 100+ gifts</div></li>
+	<li><a href="wiiu/pikmin_3.zip" class="verified">Pikmin 3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/rayman_legends.zip" class="verified">Rayman Legends</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/sonic_lost_world.zip" class="verified">Sonic Lost World</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/splatoon.zip" class="verified">Splatoon</a><div class="desc">Game 100% completed [v2.12]</div></li>
+	<li><a href="wiiu/star_fox_zero.zip">Star Fox Zero</a><div class="desc">Game completed</div></li>
+	<li><a href="wiiu/super_mario_3d_world.zip">Super Mario 3D World</a><div class="desc">Missing some character stamps</div></li>
+	<li><a href="wiiu/super_smash_bros_for_wiiu.zip" class="verified">Super Smash Bros. for WiiU</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/zelda_the_wind_waker_hd.zip" class="verified">The legend of Zelda: The Wind Waker HD</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/zelda_twilight_princess_hd.zip" class="verified">The legend of Zelda: Twilight Princess HD</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/zelda_breath_of_the_wild.zip" class="verified">The legend of Zelda: Breath of the Wild</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/yoshis_woolly_world.zip" class="verified">Yoshi&#39;s Woolly World</a><div class="desc">Missing some amiibo costumes</div></li>
+	<li><a href="wiiu/zombiu.zip">ZombiU</a><div class="desc">Game completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO WII U ESHOP -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Wii U eShop savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="wiiu/eshop/child_of_light.zip">Child of light</a><div class="desc">Game completed</div></li>
+	<li><a href="wiiu/eshop/mario_vs_donkey_kong_tipping_stars.zip" class="verified">Mario vs. Donkey Kong Tipping Stars</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="wiiu/eshop/shovel_knight.zip" class="verified">Shovel Knight</a><div class="desc">Missing Showdown</div></li>
+	<li><a href="wiiu/eshop/teslagrad.zip" class="verified">Teslagrad</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NINTENDO SWITCH -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Switch savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="switch/bayonetta_origins_cereza_and_the_lost_demon.zip">Bayonetta Origins: Cereza and the Lost Demon</a><div class="desc">Game completed</div></li>
+	<li><a href="switch/hyule_warriors_age_of_calamity.zip">Hyrule Warriors: Age of Calamity</a><div class="desc">Game completed, missing a character and some challenges/quests</div></li>
+	<li><a href="switch/kirby_forgotten_land.zip" class="verified">Kirby &amp; the Forgotten Land</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/kirbys_return_to_dreamland_deluxe.zip" class="verified">Kirby Return to Dreamland Deluxe</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/kirby_star_allies.zip" class="verified">Kirby Star Allies</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/luigis_mansion_3.zip" class="verified">Luigi's Mansion 3</a><div class="desc">Story mode 100% completed</div></li>
+	<li><a href="switch/mario_kart_8_deluxe.zip" class="verified">Mario Kart 8 Deluxe</a><div class="desc">Game 100% completed + Booster Course Pass</div></li>
+	<li><a href="switch/mario_rabbids_kingdom_battle.zip" class="verified">Mario + Rabbids: Kingdom Battle</a><div class="desc">Game 100% completed, missing some extra missions</div></li>
+	<li><a href="switch/mario_vs_donkey_kong.zip" class="verified">Mario vs Donkey Kong</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/metroid_dread.zip" class="verified">Metroid Dread</a><div class="desc">Story mode 100% completed, missing some gallery pictures</div></li>
+	<li><a href="switch/metroid_prime_remastered.zip" class="verified">Metroid Prime Remastered</a><div class="desc">Story mode 100% completed, missing some gallery pictures</div></li>
+	<li><a href="switch/metroid_prime_4_beyond.zip" class="verified">Metroid Prime 4: Beyond</a><div class="desc">Story mode 100% completed, missing Hard Mode</div></li>
+	<li><a href="switch/nintendo_world_championships_nes_edition.zip" class="verified">Nintendo World Championships: NES Edition</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/pikmin_4.zip" class="verified">Pikmin 4</a><div class="desc">Game 100% completed, missing some dandori medals</div></li>
+	<li><a href="switch/pokemon_lets_go_eevee.zip" class="verified">Pokémon: Let's Go, Eevee!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/pokemon_shield.zip" class="verified">Pokémon Shield</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/pokemon_shining_pearl.zip" class="verified">Pokémon Shining Pearl</a><div class="desc">Game 100% completed, missing Contests and Battle Tower</div></li>
+	<li><a href="switch/pokemon_legends_za.zip">Pokémon Legends: Z-A</a><div class="desc">Game 99% completed, missing Shiny Charm</div></li>
+	<li><a href="switch/pokemon_legends_arceus.zip" class="verified">Pokémon Legends: Arceus</a><div class="desc">Game 100% completed, missing v1.1 final requests</div></li>
+	<li><a href="switch/pokemon_scarlet.zip" class="verified">Pokémon Scarlet</a><div class="desc">Game 100% completed, missing Ogre Oustin Hard</div></li>
+	<li><a href="switch/princess_peach_showtime.zip" class="verified">Princess Peach: Showtime!</a><div class="desc">Game completed</div></li>
+	<li><a href="switch/rhythm_paradise_groove.zip" class="verified">Rhythm Paradise: Groove</a><div class="desc">Missing some perfect medals</div></li>
+	<li><a href="switch/splatoon_2.zip">Splatoon 2</a><div class="desc">Story mode completed</div></li>
+	<li><a href="switch/super_mario_3d_world_bowsers_fury.zip" class="verified">Super Mario 3D World + Bowser's Fury</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/super_mario_bros_wonder.zip" class="verified">Super Mario Bros. Wonder</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/super_mario_odyssey.zip" class="verified">Super Mario Odyssey</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/super_mario_rpg.zip">Super Mario RPG</a><div class="desc">Game completed</div></li>
+	<li><a href="switch/super_smash_bros_ultimate.zip" class="verified">Super Smash Bros. Ultimate</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/ufo_50.zip">UFO 50</a><div class="desc">31 games completed, 23 cherries</div></li>
+	<li><a href="switch/yoshis_crafted_world.zip" class="verified">Yoshi's Crafted World</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/zelda_breath_of_the_wild.zip" class="verified">The legend of Zelda: Breath of the Wild</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/zelda_echoes_of_wisdom.zip" class="verified">The legend of Zelda: Echoes of Wisdom</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/zelda_links_awakening.zip" class="verified">The legend of Zelda: Link's Awakening</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/zelda_skyward_sword_hd.zip" class="verified">The legend of Zelda: Skyward Sword HD</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/zelda_tears_of_the_kingdom.zip" class="verified">The legend of Zelda: Tears of the Kingdom</a><div class="desc">Game 80% completed, missing 500 koroks and some semibosses</div></li>
+</ol>
+
+
+
+<!-- NINTENDO SWITCH ESHOP -->
+<div class="h2-container"><h2 class="wrapper">Nintendo Switch eShop savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="switch/eshop/boxboy_boxgirl.zip" class="verified">BOXBOY! + BOXGIRL!</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/kemono_friends_picross.zip" class="verified">Kemono Friends Picross</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/kirbys_dream_buffet.zip" class="verified">Kirby's Dream Buffet</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/kirby_fighters_2.zip">Kirby Fighters 2</a><div class="desc">Game 61% completed</div></li>
+	<li><a href="switch/eshop/part_time_ufo.zip">Part Time UFO</a><div class="desc">Missing Infinite Tower's last medal</div></li>
+	<li><a href="switch/eshop/picross_s.zip" class="verified">Picross S</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s2.zip" class="verified">Picross S2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s3.zip" class="verified">Picross S3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s4.zip" class="verified">Picross S4</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s5.zip" class="verified">Picross S5</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s6.zip" class="verified">Picross S6</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s7.zip" class="verified">Picross S7</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s8.zip" class="verified">Picross S8</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s9.zip" class="verified">Picross S9</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s_mega_drive_and_master_system_edition.zip" class="verified">Picross S MEGA DRIVE &amp; Master System edition</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_s_namco_legendary_edition.zip" class="verified">Picross S NAMCO LEGENDARY edition</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_lord_of_the_nazarick.zip" class="verified">Picross Lord of the Nazarick</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="switch/eshop/picross_x_picbits_vs_uzboross.zip" class="verified">PICROSS X : PICBITS VS UZBOROSS</a><div class="desc">Game 100% completed, missing multiplayer achievements</div></li>
+	<li><a href="switch/eshop/snipperclips.zip" class="verified">Snipperclips Plus: Cut It Out, Together!</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SONY PLAYSTATION -->
+<div class="h2-container"><h2 class="wrapper">Sony PlayStation savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="sony/psx/castlevania_chronicles.zip" class="verified">Castlevania Chronicles<sup>USA</sup></a><div class="desc">Arrange mode completed</div></li>
+	<li><a href="sony/psx/castlevania_symphony_of_the_night.zip" class="verified">Castlevania: Symphony of the night<sup>USA</sup></a><div class="desc">Game 200.6% completed</div></li>
+	<li><a href="sony/psx/chippoke_ralph_no_daibouken.zip" class="verified">Chippoke Ralph no Daibouken</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/medievil.zip" class="verified">Medievil</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_8.zip" class="verified">Mega Man 8</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_battle_and_chase.zip" class="verified">Mega Man Battle &amp; Chase</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_x3.zip" class="verified">Mega Man X3</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_x4.zip" class="verified">Mega Man X4<sup>USA</sup></a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_x5.zip" class="verified">Mega Man X5<sup>USA</sup></a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sony/psx/mega_man_x6.zip">Mega Man X6<sup>USA</sup></a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psx/metal_gear_solid.zip">Metal Gear Solid</a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psx/tomba.zip" class="verified">Tomba!</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SONY PLAYSTATION PORTABLE -->
+<div class="h2-container"><h2 class="wrapper">Sony PlayStation Portable savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="sony/psp/gensan.zip">GenSan / Hammerin' Hero<sup>USA</sup></a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psp/god_of_war_chains_of_olympus.zip">God of War: Chains of Olympus</a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psp/god_of_war_ghost_of_sparta.zip">God of War: Ghost of Sparta</a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psp/megaman_powered_up.zip">Mega Man: Powered Up</a><div class="desc">Game 15% completed</div></li>
+	<li><a href="sony/psp/patapon.zip">Patapon</a><div class="desc">Game completed</div></li>
+	<li><a href="sony/psp/ultimate_ghosts_and_goblins.zip" class="verified">Ultimate Ghosts'n Goblins</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SEGA MASTER SYSTEM -->
+<div class="h2-container"><h2 class="wrapper">Sega Master System savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="sega/sms/wonder_boy_3_the_dragons_trap.png" class="verified">Wonder Boy III: The Dragon&#39;s Trap</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SEGA MEGA DRIVE -->
+<div class="h2-container"><h2 class="wrapper">Sega Mega Drive / Genesis savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="sega/smd/megaman_the_wily_wars.zip" class="verified">Mega Man: The Wily wars</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/smd/sonic_3_and_knuckles.zip" class="verified">Sonic 3 &amp; Knuckles</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/smd/sonic_cd.zip" class="verified">Sonic CD</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- SEGA DREAMCAST -->
+<div class="h2-container"><h2 class="wrapper">Sega Dreamcast savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="sega/dc/capcom_vs_snk_2.zip">Capcom VS SNK 2</a><div class="desc">Missing some unlockables</div></li>
+	<li><a href="sega/dc/crazy_taxi.zip" class="verified">Crazy Taxi</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/dc/crazy_taxi_2.zip" class="verified">Crazy Taxi 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/dc/ikaruga.zip">Ikaruga</a><div class="desc">Missing some unlockables</div></li>
+	<li><a href="sega/dc/jet_set_radio.zip">Jet Set Radio</a><div class="desc">Missing JET rankings and characters that are unlocked when getting them</div></li>
+	<li><a href="sega/dc/marvel_vs_capcom_2_new_age_of_heroes.zip" class="verified">Marvel VS Capcom 2</a><div class="desc">Missing most character palettes</div></li>
+	<li><a href="sega/dc/power_stone.zip" class="verified">Power Stone</a><div class="desc">Missing some unlockables</div></li>
+	<li><a href="sega/dc/power_stone_2.zip" class="verified">Power Stone 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/dc/project_justice_rival_schools_2.zip">Project Justice: Rival Schools 2</a><div class="desc">Missing some characters</div></li>
+	<li><a href="sega/dc/rayman_2_the_great_escape.zip" class="verified">Rayman 2: The great escape</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/dc/sonic_adventure.zip">Sonic Adventure</a><div class="desc">All but Big The Cat campaigns completed</div></li>
+	<li><a href="sega/dc/sonic_adventure_2.zip" class="verified">Sonic Adventure 2</a><div class="desc">Missing a few multiplayer unlockables</div></li>
+	<li><a href="sega/dc/soul_calibur.zip" class="verified">Soul Calibur</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="sega/dc/space_channel_5_part_2.zip" class="verified">Space Channel 5 part2</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- NEO GEO POCKET -->
+<div class="h2-container"><h2 class="wrapper">Neo Geo Pocket savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="other/ngp/cotton_fantastic_night_dreams.zip" class="verified">Cotton: Fantastic Night Dreams</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/delta_warp.zip" class="verified">Delta Warp</a><div class="desc">Missing Ultimate Mode</div></li>
+	<li><a href="other/ngp/dark_arms.zip" class="verified">Dark Arms: Beast Buster 1999</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/fatal_fury_first_contact.zip" class="verified">Fatal Fury: First Contact</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/ganbare_neo_pokekun.zip" class="verified">Ganbare Neo Poke-kun</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/king_of_fighters_r1.zip" class="verified">King of Fighters R-1</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/king_of_fighters_r2.zip" class="verified">King of Fighters R-2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/king_of_fighters_battle_de_paradise.zip" class="verified">King of Fighters: Battle De Paradise</a><div class="desc">Clean savegame with everything unlocked</div></li>
+	<li><a href="other/ngp/the_last_blade.zip" class="verified">The Last Blade</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/metal_slug_1st_mission.zip" class="verified">Metal Slug: 1st Mission</a><div class="desc">Missing Super Devil Mode</div></li>
+	<li><a href="other/ngp/metal_slug_2nd_mission.zip" class="verified">Metal Slug: 2nd Mission</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/neo_turf_masters.zip" class="verified">Neo Turf Masters</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/picture_puzzle.zip" class="verified">Picture Puzzle</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/pocket_tennis_color.zip" class="verified">Pocket Tennis Color</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/rockman_battle_and_fighters.zip" class="verified">Rockman Battle &amp; Fighters</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/snk_gals_fighters.zip" class="verified">SNK Gals Fighters</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/snk_vs_capcom_the_match_of_the_millenium.zip" class="verified">SNK vs. Capcom: The match of the millenium</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/samurai_shodown_2.zip" class="verified">Samurai Shodown! 2</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ngp/sonic_pocket_adventure.zip" class="verified">Sonic the Hedgehog: Pocket Adventure</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- WONDERSWAN -->
+<div class="h2-container"><h2 class="wrapper">WonderSwan savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="other/ws/kaze_no_klonoa_moonlight_museum.zip" class="verified">Kaze no Klonoa: Moonlight Museum</a><div class="desc">Game 100% completed</div></li>
+	<li><a href="other/ws/makai_mura_for_wonderswan.zip" class="verified">Makai-Mura for WonderSwan</a><div class="desc">Game 100% completed</div></li>
+</ol>
+
+
+
+<!-- PC ENGINE CD -->
+<div class="h2-container"><h2 class="wrapper">PC Engine CD savegames</h2></div>
+<ol class="wrapper">
+	<li><a href="other/pcecd/akumajou_dracula_chi_no_rinne.zip" class="verified">Akumajou Dracula X: Chi no Rondo</a><div class="desc">Missing some techniques videos</div></li>
+</ol>
+
+
+
+
+
+
+
+
+
 
 
 </body>

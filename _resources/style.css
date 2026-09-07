@@ -1,55 +1,96 @@
 body{
-	font-family: 'Montserrat', sans-serif;
-	font-size:14px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:13px;
 	line-height:1.7;
 	margin:0;
+	background-color:#272b2b;
 	background-color:#242424;
 	color: white;
 }
 
-h1{background-color:#1c1c1c;text-align:center;font-size:240%;font-weight:300; margin:0;padding:30px 15px;text-transform:uppercase;font-weight:bold}
+h1{background-color:#2b314f;background-color:#1c1c1c;text-align:center;font-size:240%;font-weight:300; margin:0;padding:30px 15px;text-transform:uppercase;font-weight:bold}
+h1, h2{font-family:'Montserrat'}
+
 #marc{color:#f8951d}
 
 
 
-nav{
-	font-family: 'Montserrat';
-	text-transform:uppercase;
-	font-weight:300;
-	font-weight:700;
-	text-align:center;
+
+.wrapper{
+	margin: 0 auto;
+	max-width:1100px;
+}
+
+
+.h2-container{
+	background-color:#101717;
+	background-color:#1f2d75;
 	background-color:#181818;
-	padding: 10px 10px;
-	margin-bottom:30px;
-	font-size:95%;
+	position:sticky;
+	top:0;
+	padding: 4px 0;
+	z-index:9001;
+}
+h2{
+	text-transform:uppercase;
+	font-size:120%;
 }
 
-nav a{
-	padding: 6px 12px;
-	color:#444444;
+
+ol{
+	list-style:none;
+	padding:0;
+	margin:0 auto 16px !important;
+}
+ol a{
+	color:white;
 	text-decoration:none;
-	transition:color .2s;
 }
-nav a.selected{
+ol a>*{
+	display:inline-block;
+	vertical-align: middle;
+}
+ol a>svg{
+	margin-left:8px;
+}
+ol li:hover{
+	cursor:pointer;
+	background-color:#1e2222;
+}
+ol li:hover a{
+	color:orange;
+	text-decoration:underline;
+}
+
+ol li{
+	padding: 5px;
+	border-bottom: 1px solid #4d5353;
+	display:flex;
+	justify-content: space-between;
+}
+ol li:last-child{
+	border-bottom: none;
+}
+
+
+.desc{
+	color:#525959;
+	text-align:right;
+}
+ol li:hover .desc{
 	color:white;
 }
 
-nav a:hover{
-	color:white;
-}
-
-nav abbr{
-	border-bottom: none !important;
-	text-decoration: none !important;
-}
 
 
 
 
-h2{text-align:center;margin-bottom:10px}
 
-h2 img{height:32px}
-h2 img.big{height:56px}
+
+
+
+
+
 
 
 
@@ -68,67 +109,6 @@ h2 img.big{height:56px}
 
 
 
-/* https://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height */
-.cover-container{
-	text-align:center; /* Align center inline elements */
-	font: 0/0 a;       /* Hide the characters like spaces */
-	height:160px;
-	//background-color:rgba(255,0,0,.1)
-}
-
-.cover-container:before {
-	content: ' ';
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
-}
-
-.cover-container img {
-	vertical-align: middle;
-	display: inline-block;
-	max-height: 100%;  /* <-- Set maximum height to 100% of its parent */
-	max-width: 100%;   /* <-- Set maximum width to 100% of its parent */
-}
-
-#intro{
-	width:720px;
-	max-width:95%;
-	margin:0 auto 60px;
-}
-/* grid layout */
-ol{
-	width:720px;max-width:95%;
-	padding:0;
-	margin:0 auto 60px;
-	list-style:none;
-	font-size:97%;
-}
-ol:after{
-	display:block;
-	clear:both;
-	margin-bottom:30px;
-	content:"";
-}
-ol>li{
-	width:25%;
-	box-sizing:padding-box;
-	padding:0;
-	margin:0;
-	float:left;
-	height:220px;
-	position:relative;
-	text-align:center;
-}
-ol>li:hover{
-	cursor:pointer;
-	background-color:#383a42;
-	background-color:#d2d5df;
-	background-color:#303030;
-}
-ol>li>a{
-	text-decoration:none;
-	color:inherit;
-}
 .more{display:none}
 
 
@@ -169,57 +149,10 @@ ol>li>a{
 	image-rendering:crisp-edges;
 }
 
-
-#balloon{
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:black;
-	background-color:white;
-	color:white;
-	color:black;
-	max-width:400px;
-	padding: 4px 12px;
-	border-radius:3px;
-	display:none;
-}
-#balloon hr{
-	border:0;
-	border-bottom:1px solid #ccc
-}
-#balloon ul{
-	list-style:square;
-	padding-left:20px;
-}
-/* arrow */
-#balloon:before{
-	width:0;height:0;position:absolute;content:"";
-	top:-6px;left:50%;margin-left:-3px;border-bottom:6px solid #fff;border-left:6px solid transparent;border-right:6px solid transparent
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width:1279px){
-	ol{width:1024px}
-	ol>li{width:20%}
-}
-@media only screen and (min-width:1919px){
-	ol{width:1100px}
-	ol>li{width:20%}
+@media only screen and (min-width:1024px){
+	body{
+		font-size:15px;
+	}
 }
 @media only screen and (max-width:639px){
-	body{font-size:13px;}
-	ol>li{width:50%}
 }
