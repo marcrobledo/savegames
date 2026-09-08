@@ -149,6 +149,64 @@ ol li:hover .desc{
 	image-rendering:crisp-edges;
 }
 
+
+
+#dialog-password{
+	background-color:white;
+	border:none;
+	border-radius: 8px;
+	min-width:auto;
+}
+#dialog-password::backdrop{
+	background-color:rgba(0,0,0, .65);
+	backdrop-filter:blur(1px);
+}
+#container-password-close{
+	text-align:right;
+	margin-bottom:8px;
+}
+
+#container-password-close button{
+	background-color:transparent;
+	border-radius:80px;
+	border:0;
+	line-height:0;
+	width:40px;
+	height:40px;
+}
+#container-password-close button:hover{
+	background-color:#ddd;
+	cursor:pointer;
+}
+
+#container-password img{
+	image-rendering: pixelated;
+	max-width:100%;
+}
+
+
+#popover-info{
+	position: fixed;
+	left: anchor(right);
+	top: anchor(bottom);
+	justify-self: right;
+	background-color: white;
+	color:black;
+	border-radius: 8px;
+	border:none;
+	padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width:1024px){
 	body{
 		font-size:15px;
